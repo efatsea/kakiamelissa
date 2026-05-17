@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kakia Melissa Brewery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand-link" href="#">
+        <img src="KM-icon-02.jpg" alt="Kakia Melissa logo" class="brand-logo" />
+        <div class="brand-copy">
+          <span class="brand-name" data-i18n="brandName">Kakia Melissa</span>
+          <span class="brand-tag" data-i18n="brandTag">Brewery & Lager</span>
+        </div>
+      </a>
+      <nav class="site-nav">
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a href="#lager" data-i18n="navLager">Lager</a>
+        <a href="#story" data-i18n="navStory">Story</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </nav>
+      <div class="lang-switch">
+        <button id="btn-en" class="lang-btn active">English</button>
+        <button id="btn-gr" class="lang-btn">Ελληνικά</button>
+      </div>
+    </header>
+
+    <section class="hero-image" style="background-image: url('kapaki km.jpg')">
+      <div class="hero-overlay"></div>
+    </section>
+
+    <main>
+      <section id="about" class="section about">
+        <div class="section-grid-wide">
+          <div class="about-image" style="background-image: url('pic_barrol_08-03.jpg')">
+          </div>
+          <div>
+            <span class="section-kicker" data-i18n="aboutKicker">About Kakia Melissa</span>
+            <h2 data-i18n="aboutHeading">Handcrafted in every batch.</h2>
+            <p data-i18n="aboutText">Kakia Melissa is a small brewery on Kythira, born from a couple's passion for good beer and Greek warmth. The name honors the island's legend of Kakia Melissa—a wise woman whose kindness brought people together. We brew lager the same way: with care, tradition, and the spirit of bringing good people around a table.</p>
+          </div>
+          <div class="about-image" style="background-image: url('owners.jpg')">
+          </div>
+        </div>
+      </section>
+
+      <section id="lager" class="section lager">
+        <div class="section-header">
+          <span class="section-kicker" data-i18n="lagerKicker">Our lager</span>
+          <h2 data-i18n="lagerHeading">A clean lager with golden depth.</h2>
+        </div>
+        <div class="beer-details">
+          <div class="beer-image" style="background-image: url('μπουκαλια.jpg')"></div>
+          <div class="beer-info">
+            <h3 data-i18n="beerName">Kakia Melissa Lager</h3>
+            <p data-i18n="beerDescription">A crisp lager with soft malt, light hops, and a refreshing finish. Perfect for sharing with friends.</p>
+            <ul>
+              <li data-i18n="beerStyle"><strong>Style:</strong> Lager</li>
+              <li data-i18n="beerAbv"><strong>ABV:</strong> 5.0%</li>
+              <li data-i18n="beerTaste"><strong>Taste:</strong> Clean, smooth, mildly floral.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="story" class="section story">
+        <div class="story-grid-wide">
+          <div>
+            <span class="section-kicker" data-i18n="storyKicker">Our story</span>
+            <h2 data-i18n="storyHeading">A small brewery with big flavors.</h2>
+            <p data-i18n="storyText">We make lager the way it should be: modest, polished, and built around a memorable drinking experience.</p>
+          </div>
+          <div class="story-image">
+            <img src="owners.jpg" alt="Kakia Melissa owners" />
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="contact-grid">
+          <div>
+            <span class="section-kicker" data-i18n="contactKicker">Get in touch</span>
+            <h2 data-i18n="contactHeading">Have questions or orders?</h2>
+            <p data-i18n="contactText">For private events, small batches or more information about our lager, send us a message and we will respond quickly.</p>
+          </div>
+          <div class="contact-card">
+            <p><strong data-i18n="contactEmailLabel">Email:</strong> <a href="mailto:kakiamelissa@gmail.com">kakiamelissa@gmail.com</a></p>
+            <p><strong data-i18n="contactPhoneLabel">Phone:</strong> Eleni +30 697 782 7664</p>
+            <p><strong data-i18n="contactPhoneLabel">Phone:</strong> Giannakos +30 695 620 4384</p>
+          </div>
+        </div>
+        <div class="contact-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.80404!2d22.9929889!3d36.2055178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135feb0b5b5b5b5b%3A0x0!2sKakia%20Melissa!5e0!3m2!1sen!2sgr!4v1621345678900" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p data-i18n="footer">Kakia Melissa Brewery | Greek-English website</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

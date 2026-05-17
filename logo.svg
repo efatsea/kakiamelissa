@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Kakia Melissa Brewery logo</title>
+  <desc id="logoDesc">A stylized brewery logo with a barley ear and amber tones.</desc>
+  <defs>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8d58b" />
+      <stop offset="100%" stop-color="#c38a3c" />
+    </linearGradient>
+    <linearGradient id="barleyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff1d5" />
+      <stop offset="100%" stop-color="#d79d47" />
+    </linearGradient>
+  </defs>
+  <rect width="240" height="120" rx="24" fill="#fff8f0" />
+  <circle cx="56" cy="60" r="38" fill="url(#goldGrad)" opacity="0.95" />
+  <path d="M54 34c4 5 4 13 4 20 0 7-2 15-4 18 0 0 6-4 9-11 3-7 3-16 0-24-3-7-9-11-9-11z" fill="url(#barleyGrad)" />
+  <path d="M46 36c-4 6-4 15-4 21 0 8 2 16 4 18 0 0-6-4-9-12-3-8-3-18 0-26 3-7 9-9 9-9z" fill="url(#barleyGrad)" />
+  <path d="M64 36c4 6 4 15 4 21 0 8-2 16-4 18 0 0 6-4 9-12 3-8 3-18 0-26-3-7-9-9-9-9z" fill="url(#barleyGrad)" />
+  <path d="M51 54c4 0 9 2 14 0" fill="none" stroke="#7d4f22" stroke-width="3" stroke-linecap="round" />
+  <text x="118" y="54" font-family="Mulish, sans-serif" font-weight="800" font-size="24" fill="#2d2a25">Kakia Melissa</text>
+  <text x="118" y="76" font-family="Mulish, sans-serif" font-weight="600" font-size="12" fill="#7d5b28">Brewery & Lager</text>
+</svg>

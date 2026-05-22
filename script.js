@@ -45,7 +45,12 @@ const translations = {
     contactText: 'For private events, small batches or more information about our lager, send us a message and we will respond quickly.',
     contactEmailLabel: 'Email:',
     contactPhoneLabel: 'Phone:',
-    footer: 'Kakia Melissa Brewery | Greek-English website'
+    footer: 'Kakia Melissa Brewery | Greek-English website',
+    ageGateHeading: 'Are you 18 or older?',
+    ageGateText: 'You must be of legal drinking age to enter this site.',
+    ageGateYes: 'Yes, I am 18+',
+    ageGateNo: 'No, I am under 18',
+    ageGateError: 'Sorry, you must be 18 or older to enter.'
   },
   gr: {
     brandName: 'Κακιά Μέλισσα',
@@ -93,7 +98,12 @@ const translations = {
     contactText: 'Για ιδιωτικές εκδηλώσεις, μικρές παρτίδες ή περισσότερες πληροφορίες για το lager μας, στείλτε μας μήνυμα και θα απαντήσουμε γρήγορα.',
     contactEmailLabel: 'Email:',
     contactPhoneLabel: 'Τηλέφωνο:',
-    footer: 'Ζυθοποιείο Kakia Melissa | Δίγλωσση ιστοσελίδα'
+    footer: 'Ζυθοποιείο Kakia Melissa | Δίγλωσση ιστοσελίδα',
+    ageGateHeading: 'Είστε 18 ετών ή μεγαλύτεροι;',
+    ageGateText: 'Πρέπει να είστε σε νόμιμη ηλικία κατανάλωσης αλκοόλ για να εισέλθετε.',
+    ageGateYes: 'Ναι, είμαι 18+',
+    ageGateNo: 'Όχι, είμαι κάτω των 18',
+    ageGateError: 'Λυπούμαστε, πρέπει να είστε 18 ή μεγαλύτεροι για να εισέλθετε.'
   }
 };
 
@@ -111,10 +121,77 @@ function setLanguage(lang) {
   });
   btnEn.classList.toggle('active', lang === 'en');
   btnGr.classList.toggle('active', lang === 'gr');
+  const btnEnAge = document.getElementById('btn-en-age');
+  const btnGrAge = document.getElementById('btn-gr-age');
+  if (btnEnAge && btnGrAge) {
+    btnEnAge.classList.toggle('active', lang === 'en');
+    btnGrAge.classList.toggle('active', lang === 'gr');
+  }
   document.documentElement.lang = lang === 'en' ? 'en' : 'el';
 }
 
 btnEn.addEventListener('click', () => setLanguage('en'));
 btnGr.addEventListener('click', () => setLanguage('gr'));
+const btnEnAge = document.getElementById('btn-en-age');
+const btnGrAge = document.getElementById('btn-gr-age');
+if (btnEnAge && btnGrAge) {
+  btnEnAge.addEventListener('click', () => setLanguage('en'));
+  btnGrAge.addEventListener('click', () => setLanguage('gr'));
+}
 
 setLanguage('en');
+
+// Age Gate Logic
+const ageGate = document.getElementById('age-gate');
+const btnAgeYes = document.getElementById('btn-age-yes');
+const btnAgeNo = document.getElementById('btn-age-no');
+const ageGateError = document.getElementById('age-gate-error');
+
+if (ageGate) {
+  if (!localStorage.getItem('ageVerified')) {
+    ageGate.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  } else {
+    ageGate.classList.add('hidden');
+  }
+
+  btnAgeYes.addEventListener('click', () => {
+    localStorage.setItem('ageVerified', 'true');
+    ageGate.classList.add('hidden');
+    document.body.style.overflow = '';
+  });
+
+  btnAgeNo.addEventListener('click', () => {
+    ageGateError.classList.remove('hide');
+  });
+}
+
+// Intersection Observer for scroll animations
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.15
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.reveal').forEach(element => {
+  observer.observe(element);
+});
+
+// Scroll event for topbar
+const topbar = document.querySelector('.topbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    topbar.classList.add('scrolled');
+  } else {
+    topbar.classList.remove('scrolled');
+  }
+});

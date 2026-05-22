@@ -10,6 +10,24 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- AGE GATE -->
+  <div id="age-gate" class="age-gate">
+    <div class="age-gate-content">
+      <img src="KM-icon-02.jpg" alt="Kakia Melissa" class="age-gate-logo" />
+      <h2 data-i18n="ageGateHeading">Are you 18 or older?</h2>
+      <p data-i18n="ageGateText">You must be of legal drinking age to enter this site.</p>
+      <div class="age-gate-actions">
+        <button id="btn-age-yes" class="button button-primary" data-i18n="ageGateYes">Yes, I am 18+</button>
+        <button id="btn-age-no" class="button button-secondary" data-i18n="ageGateNo">No, I am under 18</button>
+      </div>
+      <p id="age-gate-error" class="age-gate-error hide" data-i18n="ageGateError">Sorry, you must be 18 or older to enter.</p>
+      <div class="lang-switch lang-switch-age">
+        <button id="btn-en-age" class="lang-btn active">EN</button>
+        <button id="btn-gr-age" class="lang-btn">ΕΛ</button>
+      </div>
+    </div>
+  </div>
+
   <div class="page-shell">
     <header class="topbar">
       <a class="brand-link" href="#">
@@ -31,12 +49,19 @@
       </div>
     </header>
 
-    <section class="hero-image" style="background-image: url('kapaki km.jpg')">
-      <div class="hero-overlay"></div>
+    <section class="hero-image hero-dynamic" style="background-image: url('kapaki km.jpg')">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <span class="hero-eyebrow" data-i18n="heroEyebrow">Greek craft beer</span>
+          <h1 class="hero-heading-massive" data-i18n="heroHeading">Kakia Melissa lager, made with tradition and bold character.</h1>
+          <p class="hero-text-large" data-i18n="heroText">A single signature lager crafted with local ingredients, bright warmth and easy drinkability.</p>
+          <a href="#lager" class="button button-primary hero-btn-large" data-i18n="btnDiscover">Discover the lager</a>
+        </div>
+      </div>
     </section>
 
     <main>
-      <section id="about" class="section about">
+      <section id="about" class="section about reveal">
         <div class="section-grid-wide">
           <div class="about-image" style="background-image: url('pic_barrol_08-03.jpg')">
           </div>
@@ -50,7 +75,7 @@
         </div>
       </section>
 
-      <section id="lager" class="section lager">
+      <section id="lager" class="section lager reveal">
         <div class="section-header">
           <span class="section-kicker" data-i18n="lagerKicker">Our lager</span>
           <h2 data-i18n="lagerHeading">A clean lager with golden depth.</h2>
@@ -69,7 +94,7 @@
         </div>
       </section>
 
-      <section id="story" class="section story">
+      <section id="story" class="section story reveal">
         <div class="story-grid-wide">
           <div>
             <span class="section-kicker" data-i18n="storyKicker">Our story</span>
@@ -82,7 +107,7 @@
         </div>
       </section>
 
-      <section id="contact" class="section contact">
+      <section id="contact" class="section contact reveal">
         <div class="contact-grid">
           <div>
             <span class="section-kicker" data-i18n="contactKicker">Get in touch</span>
@@ -93,10 +118,17 @@
             <p><strong data-i18n="contactEmailLabel">Email:</strong> <a href="mailto:kakiamelissa@gmail.com">kakiamelissa@gmail.com</a></p>
             <p><strong data-i18n="contactPhoneLabel">Phone:</strong> Eleni +30 697 782 7664</p>
             <p><strong data-i18n="contactPhoneLabel">Phone:</strong> Giannakos +30 695 620 4384</p>
+            <div class="contact-social">
+              <p><strong>Follow us:</strong></p>
+              <div class="social-links-contact">
+                <a href="https://www.instagram.com/kakiamelissa/" target="_blank" rel="noopener noreferrer" class="social-link-contact">Instagram</a>
+                <a href="https://www.facebook.com/profile.php?id=61587825917383" target="_blank" rel="noopener noreferrer" class="social-link-contact">Facebook</a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="contact-map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.80404!2d22.9929889!3d36.2055178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135feb0b5b5b5b5b%3A0x0!2sKakia%20Melissa!5e0!3m2!1sen!2sgr!4v1621345678900" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.8033466!2d22.9929889!3d36.2055178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135feb0b5b5b5b5b:0x0!2sKakia%20Melissa%20Brewery!5e0!3m2!1sen!2sgr!4v1621345678900" width="100%" height="280" style="border:0;border-radius:22px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </section>
     </main>

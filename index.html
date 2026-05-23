@@ -3,10 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kakia Melissa Brewery</title>
+  <title>Kakia Melissa Brewery | Greek Craft Beer of Kythira</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Kakia Melissa Brewery is an independent Greek microbrewery on the island of Kythira. Discover our handcrafted Vienna Lager, brewed with local passion and bold character." />
+  <meta name="keywords" content="Kakia Melissa, craft beer Greece, Kythira brewery, Greek microbrewery, Vienna Lager, Greek beer, Kythira craft beer" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Facebook / Instagram -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Kakia Melissa Brewery | Greek Craft Beer of Kythira" />
+  <meta property="og:description" content="Handcrafted Vienna Lager from Kythira. Brewed in small batches with premium local character and Greek passion." />
+  <meta property="og:image" content="KM-logo-03.jpg" />
+  <meta property="og:url" content="https://kakiamelissa.gr" />
+  <meta property="og:site_name" content="Kakia Melissa Brewery" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="el_GR" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kakia Melissa Brewery | Greek Craft Beer of Kythira" />
+  <meta name="twitter:description" content="Handcrafted Vienna Lager from Kythira. Brewed in small batches with premium local character and Greek passion." />
+  <meta name="twitter:image" content="KM-logo-03.jpg" />
+
+  <!-- Structured Data (JSON-LD) for Local Business/Brewery -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Brewery",
+    "name": "Kakia Melissa Brewery",
+    "image": "KM-logo-03.jpg",
+    "@id": "https://kakiamelissa.gr/#brewery",
+    "url": "https://kakiamelissa.gr",
+    "telephone": "+306977827664",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Kakia Melissa Brewery",
+      "addressLocality": "Kythira",
+      "addressRegion": "Attica",
+      "postalCode": "80100",
+      "addressCountry": "GR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "36.2055178",
+      "longitude": "22.9929889"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "09:00",
+      "closes": "21:00"
+    },
+    "sameAs": [
+      "https://www.instagram.com/kakiamelissa/",
+      "https://www.facebook.com/profile.php?id=61587825917383"
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts Pairing: Cormorant Garamond (Heading Serif) & Mulish (Body Sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -24,12 +93,13 @@
       <div class="lang-switch lang-switch-age">
         <button id="btn-en-age" class="lang-btn active">EN</button>
         <button id="btn-gr-age" class="lang-btn">ΕΛ</button>
+        <button id="btn-goggles-age" class="goggles-btn" title="Toggle Beer Goggles Mode">🥴</button>
       </div>
     </div>
   </div>
 
   <div class="page-shell">
-    <header class="topbar">
+    <header class="topbar" id="topbar">
       <a class="brand-link" href="#">
         <img src="KM-icon-02.jpg" alt="Kakia Melissa logo" class="brand-logo" />
         <div class="brand-copy">
@@ -37,69 +107,174 @@
           <span class="brand-tag" data-i18n="brandTag">Brewery & Lager</span>
         </div>
       </a>
-      <nav class="site-nav">
+      
+      <!-- Hamburger Menu Toggle Button -->
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav">
         <a href="#about" data-i18n="navAbout">About</a>
         <a href="#lager" data-i18n="navLager">Lager</a>
         <a href="#story" data-i18n="navStory">Story</a>
+        <a href="#faq" data-i18n="navFaq">FAQ</a>
         <a href="#contact" data-i18n="navContact">Contact</a>
       </nav>
-      <div class="lang-switch">
+      
+      <div class="lang-switch" id="lang-switch-top">
         <button id="btn-en" class="lang-btn active">English</button>
         <button id="btn-gr" class="lang-btn">Ελληνικά</button>
+        <button id="btn-goggles" class="goggles-btn" title="Toggle Beer Goggles Mode">🥴</button>
       </div>
     </header>
 
+    <!-- HERO SECTION -->
     <section class="hero-image hero-dynamic" style="background-image: url('kapaki km.jpg')">
       <div class="hero-overlay">
-        <div class="hero-content">
-          <span class="hero-eyebrow" data-i18n="heroEyebrow">Greek craft beer</span>
-          <h1 class="hero-heading-massive" data-i18n="heroHeading">Kakia Melissa lager, made with tradition and bold character.</h1>
-          <p class="hero-text-large" data-i18n="heroText">A single signature lager crafted with local ingredients, bright warmth and easy drinkability.</p>
-          <a href="#lager" class="button button-primary hero-btn-large" data-i18n="btnDiscover">Discover the lager</a>
+        <div class="hero">
+          <div class="hero-left">
+            <span class="hero-eyebrow" data-i18n="heroEyebrow">Greek craft beer</span>
+            <h1 class="hero-heading-massive" data-i18n="heroHeading">Kakia Melissa lager, made with tradition and bold character.</h1>
+            <p class="hero-text-large" data-i18n="heroText">A single signature lager crafted with local ingredients, bright warmth and easy drinkability.</p>
+            <div class="hero-actions">
+              <a href="#lager" class="button button-primary hero-btn-large" data-i18n="btnDiscover">Discover the lager</a>
+              <a href="#contact" class="button button-secondary hero-btn-large" data-i18n="btnContact">Contact us</a>
+            </div>
+          </div>
+          <div class="hero-panel">
+            <div class="hero-card">
+              <span class="card-label" data-i18n="heroCardLabel">Single Beer</span>
+              <h3 class="hero-card-title" data-i18n="heroCardTitle">One lager, endless moments.</h3>
+              <p class="hero-card-text" data-i18n="heroCardText">A Vienna-style summer lager with smooth malt and gentle hops—built for warm Kythiran evenings and good company.</p>
+            </div>
+            <div class="stats-grid">
+              <div class="stat-card">
+                <span>5.0%</span>
+                <p data-i18n="statAbv">ABV</p>
+              </div>
+              <div class="stat-card">
+                <span>100%</span>
+                <p data-i18n="statLocal">Local ingredients</p>
+              </div>
+              <div class="stat-card">
+                <span>No. 1</span>
+                <p data-i18n="statBeer">Signature lager</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <main>
+      <!-- ABOUT SECTION -->
       <section id="about" class="section about reveal">
         <div class="section-grid-wide">
-          <div class="about-image" style="background-image: url('pic_barrol_08-03.jpg')">
-          </div>
+          <div class="about-image" style="background-image: url('pic_barrol_08-03.jpg')"></div>
           <div>
             <span class="section-kicker" data-i18n="aboutKicker">About Kakia Melissa</span>
             <h2 data-i18n="aboutHeading">Handcrafted in every batch.</h2>
-            <p data-i18n="aboutText">Kakia Melissa is a small brewery on Kythira, born from a couple's passion for good beer and Greek warmth. The name honors the island's legend of Kakia Melissa—a wise woman whose kindness brought people together. We brew lager the same way: with care, tradition, and the spirit of bringing good people around a table.</p>
+            <p data-i18n="aboutText">We are a couple driven by a simple, shared obsession: great taste. Our goal was clear from the start—to bring a beer of exceptional quality and the true experience of an authentic, perfectly balanced lager to the island of Kythira.</p>
+            
+            <!-- Cards imported from translation keys -->
+            <div class="about-cards">
+              <article>
+                <h4 data-i18n="aboutCard1Title">Greek roots</h4>
+                <p data-i18n="aboutCard1Text">Inspired by the landscape and seasons of Greece, our lager reflects local character and balanced taste.</p>
+              </article>
+              <article>
+                <h4 data-i18n="aboutCard2Title">Simple menu</h4>
+                <p data-i18n="aboutCard2Text">With one beer style, we focus fully on quality, consistency and the best drinking experience.</p>
+              </article>
+            </div>
           </div>
-          <div class="about-image" style="background-image: url('owners.jpg')">
-          </div>
+          <div class="about-image" style="background-image: url('owners.jpg')"></div>
         </div>
       </section>
 
+      <!-- LAGER DETAILS SECTION -->
       <section id="lager" class="section lager reveal">
         <div class="section-header">
           <span class="section-kicker" data-i18n="lagerKicker">Our lager</span>
           <h2 data-i18n="lagerHeading">A clean lager with golden depth.</h2>
         </div>
-        <div class="beer-details">
-          <div class="beer-image" style="background-image: url('μπουκαλια.jpg')"></div>
-          <div class="beer-info">
-            <h3 data-i18n="beerName">Kakia Melissa Lager</h3>
-            <p data-i18n="beerDescription">A crisp lager with soft malt, light hops, and a refreshing finish. Perfect for sharing with friends.</p>
-            <ul>
-              <li data-i18n="beerStyle"><strong>Style:</strong> Lager</li>
-              <li data-i18n="beerAbv"><strong>ABV:</strong> 5.0%</li>
-              <li data-i18n="beerTaste"><strong>Taste:</strong> Clean, smooth, mildly floral.</li>
-            </ul>
+        <div class="beer-details-grid">
+          <div class="beer-details">
+            <div class="beer-image" style="background-image: url('μπουκαλια.jpg')"></div>
+            <div class="beer-info">
+              <h3 data-i18n="beerName">Kakia Melissa Lager</h3>
+              <p data-i18n="beerDescription">Inspired by Vienna tradition, crafted with four select barley malts and two noble hops for a smooth, full-bodied amber with a golden glow and gentle floral finish. Balanced, elegant, and made to be shared under Kythiran skies.</p>
+              <ul>
+                <li data-i18n="beerStyle"><strong>Style:</strong> Vienna Lager</li>
+                <li data-i18n="beerAbv"><strong>ABV:</strong> 5.0%</li>
+                <li data-i18n="beerTaste"><strong>Taste:</strong> Velvety malt sweetness, subtle bread notes, gentle floral hop character with a crisp, dry finish.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- SENSORY PROFILE COMPONENT -->
+          <div class="sensory-profile">
+            <h3 data-i18n="flavorProfileHeading">Sensory Profile</h3>
+            <p data-i18n="flavorProfileDesc">Our lager balances rich malt characters with refreshing drinkability. Discover its flavor parameters below:</p>
+            <div class="flavor-sliders">
+              <div class="flavor-slider-item">
+                <div class="flavor-label-row">
+                  <span data-i18n="flavorCrispness">Crispness / Refreshment</span>
+                  <span class="flavor-val">90%</span>
+                </div>
+                <div class="flavor-bar-bg"><div class="flavor-bar-fill" style="width: 90%;"></div></div>
+              </div>
+              <div class="flavor-slider-item">
+                <div class="flavor-label-row">
+                  <span data-i18n="flavorMaltiness">Malt Sweetness</span>
+                  <span class="flavor-val">65%</span>
+                </div>
+                <div class="flavor-bar-bg"><div class="flavor-bar-fill" style="width: 65%;"></div></div>
+              </div>
+              <div class="flavor-slider-item">
+                <div class="flavor-label-row">
+                  <span data-i18n="flavorBitterness">Hop Bitterness</span>
+                  <span class="flavor-val">45%</span>
+                </div>
+                <div class="flavor-bar-bg"><div class="flavor-bar-fill" style="width: 45%;"></div></div>
+              </div>
+              <div class="flavor-slider-item">
+                <div class="flavor-label-row">
+                  <span data-i18n="flavorAroma">Floral / Herbal Aroma</span>
+                  <span class="flavor-val">70%</span>
+                </div>
+                <div class="flavor-bar-bg"><div class="flavor-bar-fill" style="width: 70%;"></div></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
+      <!-- STORY SECTION -->
       <section id="story" class="section story reveal">
         <div class="story-grid-wide">
           <div>
             <span class="section-kicker" data-i18n="storyKicker">Our story</span>
             <h2 data-i18n="storyHeading">A small brewery with big flavors.</h2>
-            <p data-i18n="storyText">We make lager the way it should be: modest, polished, and built around a memorable drinking experience.</p>
+            <p data-i18n="storyText">Kakia Melissa, our lager, is named for an island legend—a symbol of warmth, wisdom, and bringing people together. Each batch honors that spirit: patient brewing, honest flavors, and a golden glass meant for sharing.</p>
+            
+            <!-- Cards imported from translation keys -->
+            <div class="story-cards">
+              <article>
+                <h4 data-i18n="storyCard1Title">Slow brewing</h4>
+                <p data-i18n="storyCard1Text">Each batch is brewed with patience, allowing time for flavor to develop and the lager to settle.</p>
+              </article>
+              <article>
+                <h4 data-i18n="storyCard2Title">Golden flavor</h4>
+                <p data-i18n="storyCard2Text">A delicate balance of malt sweetness and gentle hop bitterness, finished with a crisp, clean mouthfeel.</p>
+              </article>
+              <article>
+                <h4 data-i18n="storyCard3Title">Friendly service</h4>
+                <p data-i18n="storyCard3Text">We welcome tastings, events and conversations about beer with honest Greek warmth.</p>
+              </article>
+            </div>
           </div>
           <div class="story-image">
             <img src="owners.jpg" alt="Kakia Melissa owners" />
@@ -107,35 +282,162 @@
         </div>
       </section>
 
-      <section id="contact" class="section contact reveal">
-        <div class="contact-grid">
-          <div>
-            <span class="section-kicker" data-i18n="contactKicker">Get in touch</span>
-            <h2 data-i18n="contactHeading">Have questions or orders?</h2>
-            <p data-i18n="contactText">For private events, small batches or more information about our lager, send us a message and we will respond quickly.</p>
+      <!-- FAQ SECTION (NEW) -->
+      <section id="faq" class="section faq reveal">
+        <div class="section-header">
+          <span class="section-kicker" data-i18n="faqKicker">Questions</span>
+          <h2 data-i18n="faqHeading">Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faqQ1">Where can I find Kakia Melissa lager?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p data-i18n="faqA1">Our craft lager is distributed in select bars, tavernas, and shops across the island of Kythira. You can also order directly from our microbrewery for private events or home delivery on the island.</p>
+              </div>
+            </div>
           </div>
-          <div class="contact-card">
-            <p><strong data-i18n="contactEmailLabel">Email:</strong> <a href="mailto:kakiamelissa@gmail.com">kakiamelissa@gmail.com</a></p>
-            <p><strong data-i18n="contactPhoneLabel">Phone:</strong> Eleni +30 697 782 7664</p>
-            <p><strong data-i18n="contactPhoneLabel">Phone:</strong> Giannakos +30 695 620 4384</p>
-            <div class="contact-social">
-              <p><strong>Follow us:</strong></p>
-              <div class="social-links-contact">
-                <a href="https://www.instagram.com/kakiamelissa/" target="_blank" rel="noopener noreferrer" class="social-link-contact">Instagram</a>
-                <a href="https://www.facebook.com/profile.php?id=61587825917383" target="_blank" rel="noopener noreferrer" class="social-link-contact">Facebook</a>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faqQ2">Can I visit the brewery for a tasting?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p data-i18n="faqA2">Yes! We welcome visitors for tastings and microbrewery tours by appointment. Please send us a message through the contact form or call us in advance to schedule your visit.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faqQ3">What makes your lager unique?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p data-i18n="faqA3">We use four premium barley malts and two noble hops, brewing in small, unhurried batches. It's a Vienna Lager style, offering rich malt flavors with a clean, crisp finish that is perfect for the Greek summer climate.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faqQ4">Do you ship outside Kythira?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p data-i18n="faqA4">Currently, our main distribution is on Kythira to ensure maximum freshness and support the local community. However, for special orders or bulk shipments, please get in touch with us to discuss logistics.</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="contact-map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.8033466!2d22.9929889!3d36.2055178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135feb0b5b5b5b5b:0x0!2sKakia%20Melissa%20Brewery!5e0!3m2!1sen!2sgr!4v1621345678900" width="100%" height="280" style="border:0;border-radius:22px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="section contact reveal">
+        <div class="contact-layout">
+          <div class="contact-details">
+            <span class="section-kicker" data-i18n="contactKicker">Get in touch</span>
+            <h2 data-i18n="contactHeading">Have questions or orders?</h2>
+            <p data-i18n="contactText">For private events, small batches or more information about our lager, send us a message and we will respond quickly.</p>
+            
+            <div class="contact-info-cards">
+              <div class="contact-card">
+                <p><strong data-i18n="contactEmailLabel">Email:</strong> <a href="mailto:kakiamelissa@gmail.com">kakiamelissa@gmail.com</a></p>
+                <p><strong data-i18n="contactPhoneLabel">Phone:</strong> <span data-i18n="contactEleni">Eleni</span> <a href="tel:+306977827664">+30 697 782 7664</a></p>
+                <p><strong data-i18n="contactPhoneLabel">Phone:</strong> <span data-i18n="contactGiannakos">Giannakos</span> <a href="tel:+306956204384">+30 695 620 4384</a></p>
+                <div class="contact-social">
+                  <p><strong data-i18n="contactFollowUs">Follow us:</strong></p>
+                  <div class="social-links-contact">
+                    <a href="https://www.instagram.com/kakiamelissa/" target="_blank" rel="noopener noreferrer" class="social-link-contact" data-i18n="contactInstagram">Instagram</a>
+                    <a href="https://www.facebook.com/profile.php?id=61587825917383" target="_blank" rel="noopener noreferrer" class="social-link-contact" data-i18n="contactFacebook">Facebook</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Interactive Message Form -->
+          <div class="contact-form-container">
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="form-name" data-i18n="formNameLabel">Name</label>
+                <input type="text" id="form-name" required placeholder="Eleni or John" />
+              </div>
+              <div class="form-group">
+                <label for="form-email" data-i18n="formEmailLabelInput">Email</label>
+                <input type="email" id="form-email" required placeholder="you@example.com" />
+              </div>
+              <div class="form-group">
+                <label for="form-message" data-i18n="formMessageLabel">Message</label>
+                <textarea id="form-message" required rows="4" placeholder="How can we help? Orders, tastings, events..."></textarea>
+              </div>
+              <button type="submit" class="button button-primary" id="btn-submit-form" data-i18n="formSubmit">Send Message</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="contact-map custom-interactive-map" id="custom-map">
+          <!-- Custom bottle cap cursor -->
+          <div id="custom-map-cursor"></div>
+          
+          <!-- Fixed vignette overlay framing the viewport -->
+          <div class="map-overlay-vignette"></div>
+          
+          <!-- Sound on/off toggle button -->
+          <button class="map-sound-toggle-btn" id="btn-map-sound-toggle" aria-label="Toggle map sound" title="Mute/Unmute Buzz Sound">
+            <span class="sound-icon">🔊</span>
+          </button>
+          
+          <!-- Inner scrollable map canvas sheet -->
+          <div class="map-inner" id="map-inner">
+            <!-- Pulsing brewery marker -->
+            <div class="map-marker-container" id="map-marker-container">
+              <div class="map-marker-pulse"></div>
+              <button class="map-marker-btn" aria-label="Kakia Melissa Brewery location" id="btn-map-marker" aria-expanded="false">
+                <img src="KM-icon-02.jpg" alt="Kakia Melissa Logo" />
+              </button>
+              
+              <!-- Glassmorphic Popup Card -->
+              <div class="map-popup-card" id="map-popup-card">
+                <img src="KM-icon-02.jpg" alt="Kakia Melissa logo" class="popup-logo" />
+                <div class="popup-info">
+                  <h4 data-i18n="mapPopupTitle">Kakia Melissa Brewery</h4>
+                  <p data-i18n="mapPopupDesc">First microbrewery of Kythira. Near Livadi.</p>
+                  <div class="popup-actions">
+                    <a href="https://maps.google.com/?q=36.2055178,22.9929889" target="_blank" rel="noopener noreferrer" class="button button-primary popup-btn" data-i18n="mapOpenGoogle">Open in Maps</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=36.2055178,22.9929889" target="_blank" rel="noopener noreferrer" class="button button-secondary popup-btn" data-i18n="mapDirections">Directions</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Town and Brewery labels overlaid on exact pixel coordinates -->
+            <div class="map-label brewery-label" style="left: 800px; top: 1500px;" data-i18n="labelMelissa">Melissa</div>
+            <div class="map-label" style="left: 800px; top: 2000px;" data-i18n="labelChora">Chora</div>
+            <div class="map-label" style="left: 1350px; top: 1000px;" data-i18n="labelDiakofti">Diakofti</div>
+            <div class="map-label" style="left: 550px; top: 750px;" data-i18n="labelPotamos">Potamos</div>
+            <div class="map-label" style="left: 750px; top: 1750px;" data-i18n="labelLivadi">Livadi</div>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="footer">
       <p data-i18n="footer">Kakia Melissa Brewery | Greek-English website</p>
+      <button onclick="localStorage.removeItem('ageVerified'); location.reload();" class="footer-reset-btn">Reset Age Verification</button>
     </footer>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="toast hidden">
+    <div class="toast-content">
+      <span class="toast-icon">✓</span>
+      <span id="toast-message" data-i18n="toastSuccess">Message sent successfully!</span>
+    </div>
   </div>
 
   <script src="script.js"></script>

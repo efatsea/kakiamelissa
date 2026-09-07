@@ -6,14 +6,16 @@
   <title>Kakia Melissa Brewery</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 <body>
   <!-- AGE GATE -->
   <div id="age-gate" class="age-gate">
     <div class="age-gate-content">
-      <img src="KM-icon-02.jpg" alt="Kakia Melissa" class="age-gate-logo" />
+      <img src="KM-logo-01-a.jpg" alt="Kakia Melissa" class="age-gate-logo" />
       <h2 data-i18n="ageGateHeading">Are you 18 or older?</h2>
       <p data-i18n="ageGateText">You must be of legal drinking age to enter this site.</p>
       <div class="age-gate-actions">
@@ -31,7 +33,7 @@
   <div class="page-shell">
     <header class="topbar">
       <a class="brand-link" href="#">
-        <img src="KM-icon-02.jpg" alt="Kakia Melissa logo" class="brand-logo" />
+        <img src="KM-logo-01-a.jpg" alt="Kakia Melissa logo" class="brand-logo" />
         <div class="brand-copy">
           <span class="brand-name" data-i18n="brandName">Kakia Melissa</span>
           <span class="brand-tag" data-i18n="brandTag">Brewery & Lager</span>
@@ -70,7 +72,7 @@
             <h2 data-i18n="aboutHeading">Handcrafted in every batch.</h2>
             <p data-i18n="aboutText">Kakia Melissa is a small brewery on Kythira, born from a couple's passion for good beer and Greek warmth. The name honors the island's legend of Kakia Melissa—a wise woman whose kindness brought people together. We brew lager the same way: with care, tradition, and the spirit of bringing good people around a table.</p>
           </div>
-          <div class="about-image" style="background-image: url('owners.jpg')">
+          <div class="about-image" style="background-image: url('unnamed.jpg')">
           </div>
         </div>
       </section>
@@ -102,7 +104,7 @@
             <p data-i18n="storyText">We make lager the way it should be: modest, polished, and built around a memorable drinking experience.</p>
           </div>
           <div class="story-image">
-            <img src="owners.jpg" alt="Kakia Melissa owners" />
+            <img src="unnamed.jpg" alt="Kakia Melissa owners" />
           </div>
         </div>
       </section>
@@ -117,7 +119,6 @@
           <div class="contact-card">
             <p><strong data-i18n="contactEmailLabel">Email:</strong> <a href="mailto:kakiamelissa@gmail.com">kakiamelissa@gmail.com</a></p>
             <p><strong data-i18n="contactPhoneLabel">Phone:</strong> Eleni +30 697 782 7664</p>
-            <p><strong data-i18n="contactPhoneLabel">Phone:</strong> Giannakos +30 695 620 4384</p>
             <div class="contact-social">
               <p><strong>Follow us:</strong></p>
               <div class="social-links-contact">
@@ -128,7 +129,7 @@
           </div>
         </div>
         <div class="contact-map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.8033466!2d22.9929889!3d36.2055178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135feb0b5b5b5b5b:0x0!2sKakia%20Melissa%20Brewery!5e0!3m2!1sen!2sgr!4v1621345678900" width="100%" height="280" style="border:0;border-radius:22px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div id="map" style="width: 100%; height: 280px; z-index: 1;"></div>
         </div>
       </section>
     </main>

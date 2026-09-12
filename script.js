@@ -196,3 +196,35 @@ window.addEventListener('scroll', () => {
   }
 });
 
+// Dynamically crop and zoom the favicon
+window.addEventListener('load', () => {
+  const img = new Image();
+  img.src = 'KM-icon-01-a.jpg';
+  img.onload = () => {
+    const canvas = document.createElement('canvas');
+    canvas.width = 64;
+    canvas.height = 64;
+    const ctx = canvas.getContext('2d');
+    
+    // Zoom in by 1.4x to remove whitespace
+    const zoom = 1.4; 
+    const w = img.width;
+    const h = img.height;
+    const cropW = w / zoom;
+    const cropH = h / zoom;
+    const cropX = (w - cropW) / 2;
+    const cropY = (h - cropH) / 2;
+    
+    ctx.drawImage(img, cropX, cropY, cropW, cropH, 0, 0, 64, 64);
+    
+    let link = document.querySelector("link[rel*='icon']");
+    if (!link) {
+      link = document.createElement('link');
+      link.rel = 'icon';
+      document.head.appendChild(link);
+    }
+    link.type = 'image/png';
+    link.href = canvas.toDataURL('image/png');
+  };
+});
+

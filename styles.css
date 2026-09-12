@@ -543,12 +543,7 @@ main {
   border-color: var(--brand-gold);
 }
 
-.contact-map {
-  margin-top: 32px;
-  border-radius: 22px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
+
 
 .about-cards p,
 .story-cards p,
@@ -786,7 +781,3 @@ main {
   justify-content: center;
 }
 
-.custom-bee-icon {
-  background: transparent;
-  border: none;
-}

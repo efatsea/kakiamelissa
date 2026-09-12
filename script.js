@@ -45,7 +45,7 @@ const translations = {
     contactText: 'For private events, small batches or more information about our lager, send us a message and we will respond quickly.',
     contactEmailLabel: 'Email:',
     contactPhoneLabel: 'Phone:',
-    footer: 'Kakia Melissa Brewery | Greek-English website',
+    footer: 'Kakia Melissa Brewery',
     ageGateHeading: 'Are you 18 or older?',
     ageGateText: 'You must be of legal drinking age to enter this site.',
     ageGateYes: 'Yes, I am 18+',
@@ -98,7 +98,7 @@ const translations = {
     contactText: 'Για ιδιωτικές εκδηλώσεις, μικρές παρτίδες ή περισσότερες πληροφορίες για το lager μας, στείλτε μας μήνυμα και θα απαντήσουμε γρήγορα.',
     contactEmailLabel: 'Email:',
     contactPhoneLabel: 'Τηλέφωνο:',
-    footer: 'Ζυθοποιείο Kakia Melissa | Δίγλωσση ιστοσελίδα',
+    footer: 'Ζυθοποιείο Kakia Melissa',
     ageGateHeading: 'Είστε 18 ετών ή μεγαλύτεροι;',
     ageGateText: 'Πρέπει να είστε σε νόμιμη ηλικία κατανάλωσης αλκοόλ για να εισέλθετε.',
     ageGateYes: 'Ναι, είμαι 18+',
@@ -148,7 +148,7 @@ const btnAgeNo = document.getElementById('btn-age-no');
 const ageGateError = document.getElementById('age-gate-error');
 
 if (ageGate) {
-  if (!localStorage.getItem('ageVerified')) {
+  if (!sessionStorage.getItem('ageVerified')) {
     ageGate.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
   } else {
@@ -156,7 +156,7 @@ if (ageGate) {
   }
 
   btnAgeYes.addEventListener('click', () => {
-    localStorage.setItem('ageVerified', 'true');
+    sessionStorage.setItem('ageVerified', 'true');
     ageGate.classList.add('hidden');
     document.body.style.overflow = '';
   });

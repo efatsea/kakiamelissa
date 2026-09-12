@@ -139,7 +139,7 @@ if (btnEnAge && btnGrAge) {
   btnGrAge.addEventListener('click', () => setLanguage('gr'));
 }
 
-setLanguage('en');
+setLanguage('gr');
 
 // Age Gate Logic
 const ageGate = document.getElementById('age-gate');

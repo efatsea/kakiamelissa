@@ -183,14 +183,14 @@ img {
 
 .brand-logo {
   width: auto;
-  height: 64px;
+  height: 90px;
   object-fit: contain;
   border-radius: 8px;
 }
 
 @media (min-width: 768px) {
   .brand-logo {
-    height: 84px;
+    height: 150px;
   }
 }
 
@@ -709,7 +709,7 @@ main {
     gap: 12px;
   }
   .brand-logo {
-    height: 64px;
+    height: 90px;
   }
   .brand-copy,
   .social-links {

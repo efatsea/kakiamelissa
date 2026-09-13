@@ -586,12 +586,7 @@ main {
   background: linear-gradient(to top, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.85) 60%, transparent 100%);
   width: 100%;
   padding: 80px 40px 40px;
-  transform: translateY(70px);
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.beer-details:hover .beer-info {
-  transform: translateY(0);
 }
 
 .beer-info h3 {

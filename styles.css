@@ -566,9 +566,10 @@ main {
 }
 
 .beer-image-container {
-  height: calc(100vh - 140px);
-  min-height: 600px;
-  max-height: 800px;
+  aspect-ratio: 4 / 5;
+  height: auto;
+  max-height: calc(100vh - 140px);
+  width: 100%;
   position: sticky;
   top: 100px;
   border-radius: 32px;

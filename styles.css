@@ -449,8 +449,7 @@ main {
   gap: 16px;
 }
 
-.about-image,
-.story-image {
+.about-image {
   min-height: 300px;
   height: 100%;
   border-radius: 28px;
@@ -463,13 +462,26 @@ main {
   justify-content: center;
 }
 
-.about-image img,
-.story-image img {
+.about-image img {
   width: 100%;
   height: 100%;
-  max-height: 500px;
   object-fit: cover;
   object-position: center 35%;
+}
+
+.story-image {
+  width: 100%;
+  height: auto;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  display: flex;
+}
+
+.story-image img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .story-grid-wide {

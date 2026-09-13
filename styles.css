@@ -3,8 +3,8 @@
   --font-body: 'Montserrat', system-ui, sans-serif;
   --font-heading: 'Playfair Display', serif;
   font-family: var(--font-body);
-  background: #F9F6F0; /* Light earthy beige */
-  color: #2C241B; /* Dark earthy brown */
+  background: #FFFFFF;
+  color: #2C241B;
   --brand-dark: #1A140F;
   --brand-black: #000000;
   --brand-gold: #D4A352;
@@ -152,13 +152,14 @@ img {
   flex-wrap: wrap;
   gap: 16px;
   padding: 16px 24px;
-  border-radius: 24px;
-  background: rgba(249, 246, 240, 0.7);
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: none;
   position: sticky;
-  top: 16px;
+  top: 0;
   z-index: 10;
   isolation: isolate;
   transition: all var(--transition-fast);
@@ -488,11 +489,11 @@ main {
 }
 
 .section {
-  background: #FFFFFF;
-  border-radius: 28px;
-  padding: 32px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
-  border: 1px solid rgba(0, 0, 0, 0.03);
+  background: transparent;
+  border-radius: 0;
+  padding: 40px 0;
+  box-shadow: none;
+  border: none;
 }
 
 .section-grid,
@@ -748,10 +749,10 @@ main {
 
 @media (max-width: 680px) {
   .page-shell {
-    padding: 16px 12px 32px;
+    padding: 0 0 32px;
   }
   .section {
-    padding: 24px;
+    padding: 24px 0;
   }
   .section-grid-wide {
     grid-template-columns: 1fr;
@@ -925,9 +926,9 @@ main {
 @media (max-width: 680px) {
   .gallery-grid {
     grid-template-columns: 1fr;
-    width: calc(100% + 72px);
-    margin-left: -36px;
-    margin-right: -36px;
+    width: calc(100% + 48px);
+    margin-left: -24px;
+    margin-right: -24px;
     gap: 4px;
   }
   .gallery-item {
@@ -937,9 +938,9 @@ main {
   .about-image,
   .story-image,
   .beer-image-container {
-    width: calc(100% + 72px) !important;
-    margin-left: -36px !important;
-    margin-right: -36px !important;
+    width: calc(100% + 48px) !important;
+    margin-left: -24px !important;
+    margin-right: -24px !important;
     border-radius: 0 !important;
     border: none !important;
   }

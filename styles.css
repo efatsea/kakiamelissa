@@ -566,22 +566,20 @@ main {
 }
 
 .beer-image-container {
-  aspect-ratio: 4 / 5;
-  height: auto;
+  height: 600px;
   max-height: calc(100vh - 140px);
   width: 100%;
   position: sticky;
   top: 100px;
-  border-radius: 32px;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-  transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  box-shadow: none;
+  transition: transform var(--transition-medium);
 }
 
 .beer-image-container:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
 }
 
 .beer-info {

@@ -182,7 +182,6 @@ img {
   width: 160px;
   height: auto;
   object-fit: contain;
-  mix-blend-mode: multiply;
   border-radius: 16px;
 }
 

@@ -222,6 +222,28 @@ img {
   font-weight: 600;
 }
 
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.top-socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.top-socials a {
+  transition: transform var(--transition-fast), filter var(--transition-fast);
+  display: flex;
+}
+
+.top-socials a:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
 .lang-switch {
   display: inline-flex;
   gap: 10px;
@@ -729,9 +751,13 @@ main {
   .hamburger.open span:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
   }
-  .lang-switch {
+  .topbar-actions {
     order: 1;
-    margin-left: auto; /* Push it to the right, before hamburger */
+    margin-left: auto;
+    gap: 16px;
+  }
+  .lang-switch {
+    margin-left: 0;
   }
   .site-nav {
     display: none;

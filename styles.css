@@ -224,7 +224,8 @@ img {
 .lang-btn {
   border: 1px solid rgba(255, 216, 110, 0.25);
   border-radius: 999px;
-  padding: 10px 16px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
   font-weight: 700;
   cursor: pointer;
   background: #fff;
@@ -768,10 +769,6 @@ main {
   }
   .lang-switch {
     width: auto;
-  }
-  .lang-btn {
-    padding: 8px 14px;
-    font-size: 0.85rem;
   }
 }
 

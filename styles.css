@@ -931,9 +931,23 @@ main {
 @media (max-width: 680px) {
   .gallery-grid {
     grid-template-columns: 1fr;
+    width: calc(100% + 72px);
+    margin-left: -36px;
+    margin-right: -36px;
+    gap: 4px;
   }
   .gallery-item {
     height: 250px;
+    border-radius: 0;
+  }
+  .about-image,
+  .story-image,
+  .beer-image-container {
+    width: calc(100% + 72px) !important;
+    margin-left: -36px !important;
+    margin-right: -36px !important;
+    border-radius: 0 !important;
+    border: none !important;
   }
 }
 

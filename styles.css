@@ -559,7 +559,7 @@ main {
 
 .beer-grid {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-columns: 1fr;
   gap: 60px;
   align-items: start;
   margin-top: 40px;
@@ -569,11 +569,9 @@ main {
   height: 600px;
   max-height: calc(100vh - 140px);
   width: 100%;
-  position: sticky;
-  top: 100px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center;
   box-shadow: none;
   transition: transform var(--transition-medium);
 }

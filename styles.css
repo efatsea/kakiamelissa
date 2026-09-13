@@ -456,10 +456,7 @@ main {
 }
 
 .about-image {
-  min-height: 300px;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
+  height: auto;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -767,7 +764,7 @@ main {
   }
   .about-image,
   .story-image {
-    min-height: 240px;
+    height: auto;
   }
   .hero {
     padding: 24px 20px;
@@ -913,9 +910,7 @@ main {
 }
 
 .gallery-item {
-  height: 350px;
-  background-size: cover;
-  background-position: center;
+  height: auto;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
@@ -940,7 +935,7 @@ main {
     gap: 4px;
   }
   .gallery-item {
-    height: 250px;
+    height: auto;
     border-radius: 0;
   }
   .about-image,

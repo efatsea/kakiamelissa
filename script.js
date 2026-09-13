@@ -9,7 +9,7 @@ const translations = {
     heroHeading: 'KAKIA MELISSA',
     heroSubtitle: 'Because the good bee makes honey, while the "bad" one makes beer.',
     heroText: 'An authentic lager from Kythira. Brewed with passion and select Greek barley, for a crisp taste and true character.',
-    btnDiscover: 'Discover the lager',
+    btnDiscover: 'Discover our beer',
     btnContact: 'Contact us',
     heroCardLabel: 'Single Beer',
     heroCardTitle: 'One lager, endless moments.',

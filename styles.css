@@ -757,6 +757,9 @@ main {
   .section-grid-wide {
     grid-template-columns: 1fr;
   }
+  .section-grid-wide > div:nth-child(2) {
+    order: 0;
+  }
   .about-image,
   .story-image {
     min-height: 240px;

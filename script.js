@@ -18,8 +18,8 @@ const translations = {
     statLocal: 'Local ingredients',
     statBeer: 'Signature lager',
     aboutKicker: 'About Kakia Melissa',
-    aboutHeading: 'Two Brewers. One Exceptional Lager.',
-    aboutText: 'We are a couple driven by a simple, shared obsession: great taste. Our goal was clear from the start—to bring a beer of exceptional quality and the true experience of an authentic, perfectly balanced lager to the island of Kythira. Kakia Melissa is a purely independent operation. It\'s just the two of us in the brewery, handling every single step. From milling the malt to the final packaging, we pour our hearts, uncompromising attention to detail, and a whole lot of meraki into every batch. We don\'t rush the process, and we never compromise on quality. To ensure that every glass you pour is exactly as we intended, our lager is carefully pasteurized. This guarantees absolute consistency and flavor stability, so you can always count on the same crisp, refreshing taste. Brewed with care, made to be shared under the Kytherian sun.',
+    aboutHeading: 'Two people. One authentic Lager.',
+    aboutText: '«We are Eleni Fatsea and Giannakos Kominos, a couple with a shared love for clean, true flavors. Our vision from the start was one: to create a craft beer of exceptional quality on Kythira.<br><br>In our microbrewery, it is literally just the two of us. This means that every drop, every stage of production, passes through our hands. We put all our passion into every batch, brewing the beer that we ourselves would want to enjoy in our glass, without any compromises.<br><br>But passion alone is not enough; knowledge is also needed. With Giannakos holding a degree in Brewing and Distilling from Heriot-Watt University in Scotland, we marry academic expertise with the craft philosophy. Thus, we guarantee that every bottle of "Kakia Melissa" hides inside not only soul and island character, but also absolute technical perfection.»',
     aboutCard1Title: 'Greek roots',
     aboutCard1Text: 'Inspired by the landscape and seasons of Greece, our lager reflects local character and balanced taste.',
     aboutCard2Title: 'Simple menu',
@@ -71,8 +71,8 @@ const translations = {
     statLocal: 'Τοπικά υλικά',
     statBeer: 'Signature lager',
     aboutKicker: 'Σχετικά με την Κακιά Μέλισσα',
-    aboutHeading: 'Δύο Άνθρωποι. Μια Αυθεντική Lager.',
-    aboutText: 'Είμαστε ένα ζευγάρι με κοινή αγάπη για τις καθαρές, αληθινές γεύσεις. Το όραμά μας ήταν εξαρχής ένα: να φέρουμε στα Κύθηρα μια μπίρα εξαιρετικής ποιότητας και να προσφέρουμε την απόλυτη εμπειρία μιας αυθεντικής, καλοφτιαγμένης lager. Στο ζυθοποιείο μας, είμαστε μόνο οι δυο μας. Αυτό σημαίνει ότι κάθε σταγόνα περνάει από τα χέρια μας. Δίνουμε τεράστια προσοχή στη λεπτομέρεια και βάζουμε όλο μας το μεράκι σε κάθε παρτίδα. Ζυθοποιούμε την μπίρα που κι εμείς οι ίδιοι θέλουμε να απολαμβάνουμε, χωρίς εκπτώσεις. Γι\' αυτόν τον λόγο, η μπύρα μας παστεριώνεται προσεκτικά. Αυτό το βήμα μάς επιτρέπει να «κλειδώσουμε» το γευστικό της προφίλ, προσφέροντας απόλυτη σταθερότητα στη γεύση και συνέπεια στην ποιότητα. Έτσι, κάθε μπουκάλι που ανοίγετε είναι εγγυημένα το ίδιο δροσιστικό και απολαυστικό.',
+    aboutHeading: 'Δύο άνθρωποι. Μια αυθεντική Lager.',
+    aboutText: '«Είμαστε η Ελένη Φατσέα και ο Γιαννακός Κομηνός, ένα ζευγάρι με κοινή αγάπη για τις καθαρές, αληθινές γεύσεις. Το όραμά μας ήταν εξαρχής ένα: να δημιουργήσουμε στα Κύθηρα μια craft μπύρα εξαιρετικής ποιότητας.<br><br>Στο μικροζυθοποιείο μας είμαστε κυριολεκτικά οι δυο μας. Αυτό σημαίνει ότι κάθε σταγόνα, κάθε στάδιο της παραγωγής, περνάει από τα χέρια μας. Βάζουμε όλο μας το μεράκι σε κάθε παρτίδα, ζυθοποιώντας την μπύρα που θα θέλαμε κι εμείς οι ίδιοι να απολαμβάνουμε στο ποτήρι μας, χωρίς καμία απολύτως έκπτωση.<br><br>Όμως, το πάθος από μόνο του δεν αρκεί· χρειάζεται και γνώση. Με τον Γιαννακό να είναι κάτοχος του πτυχίου Brewing and Distilling από το Πανεπιστήμιο Heriot-Watt της Σκωτίας, παντρεύουμε την ακαδημαϊκή εξειδίκευση με την craft φιλοσοφία. Έτσι, εγγυόμαστε ότι κάθε μπουκάλι "Κακιά Μέλισσα" κρύβει μέσα του όχι μόνο ψυχή και νησιώτικο χαρακτήρα, αλλά και απόλυτη τεχνική αρτιότητα.»',
     aboutCard1Title: 'Ελληνικές ρίζες',
     aboutCard1Text: 'Εμπνευσμένο από την ελληνική φύση και εποχές, το lager μας αντανακλά τοπικό χαρακτήρα και ισορροπημένη γεύση.',
     aboutCard2Title: 'Απλό μενού',
@@ -116,7 +116,7 @@ function setLanguage(lang) {
   elements.forEach(element => {
     const key = element.dataset.i18n;
     if (key && key in text) {
-      element.textContent = text[key];
+      element.innerHTML = text[key];
     }
   });
   btnEn.classList.toggle('active', lang === 'en');

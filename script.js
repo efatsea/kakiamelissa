@@ -178,6 +178,25 @@ if (ageGate) {
   });
 }
 
+// Mobile Menu Logic
+const hamburger = document.getElementById('hamburger');
+const siteNav = document.querySelector('.site-nav');
+
+if (hamburger && siteNav) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    siteNav.classList.toggle('open');
+  });
+
+  // Close menu when a link is clicked
+  siteNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      siteNav.classList.remove('open');
+    });
+  });
+}
+
 // Intersection Observer for scroll animations
 const observerOptions = {
   root: null,

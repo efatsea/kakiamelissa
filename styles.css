@@ -452,10 +452,8 @@ main {
 .about-image {
   min-height: 300px;
   height: 100%;
-  border-radius: 28px;
   background-size: cover;
   background-position: center;
-  border: 1px solid rgba(255, 255, 255, 0.08);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -472,8 +470,6 @@ main {
 .story-image {
   width: 100%;
   height: auto;
-  border-radius: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
   overflow: hidden;
   display: flex;
 }
@@ -585,7 +581,6 @@ main {
   width: 100%;
   position: sticky;
   top: 100px;
-  border-radius: 32px;
   background-size: cover;
   background-position: center;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
@@ -910,7 +905,6 @@ main {
 
 .gallery-item {
   height: 350px;
-  border-radius: 24px;
   background-size: cover;
   background-position: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
